@@ -1,0 +1,32 @@
+---
+title: "API_DATAMEXICO"
+author: "Luz Yolanda Rivera"
+date: "10/22/2021"
+output: html_document
+---
+####Lab API DATAMEXICO
+#CONVERTIR UN ARCHIVO JSON EN LISA
+
+#INSTALAMOS EL PAQUETE
+#install.packages("jsonlite")
+#LLAMAMOS AL PROGRMA 
+```{r}
+
+library(jsonlite)
+```
+
+#UBICAMOS EL ARCHIVO
+#file.choose()
+#NOMBRAMOS AL ARCHIVO JSON
+```{r}
+datos_api2<-fromJSON("/Users/luz/Documents/GitHub/Temas selectos3/LYRA_LAB58 API Data mexico/Municipality-Year-records.json")
+```
+
+#NOS DAMOS CUENTA QUE ES UNA LISTA
+```{r}
+class(datos_api2)
+```
+#DONDE SUS ENCABEZADOS SON "DATA" Y "SOURCE"
+```{r}
+names (datos_api2)
+```
